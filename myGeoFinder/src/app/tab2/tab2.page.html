@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card class="welcome-card">
+		<img src="/assets/shapes.svg" alt="" />
+		<ion-card-header>
+			<ion-card-subtitle>{{author}}</ion-card-subtitle>
+			<ion-card-subtitle><br /></ion-card-subtitle>
+			<ion-card-subtitle>{{course}}</ion-card-subtitle>
+			<ion-card-subtitle>{{period}}</ion-card-subtitle>
+		</ion-card-header>
+	</ion-card>
+
+	<ion-item>
+		<ion-label class="appInfo labelInfo">Auto-update</ion-label>
+		<h3 class="toggleInfo">Off</h3>
+		<ion-toggle name="auto-update" color="medium" checked={{autoMode}} (ionChange)=ionToggleChange()></ion-toggle>
+		<h3 class="toggleInfo">On</h3>
+	</ion-item>
+
+	<h2 class="ion-text-center appInfo">Latitude: N {{latitude}}</h2>
+	<h2 class="ion-text-center appInfo">Longitude: W {{longitude}}</h2>
+	<br />
+	<div class="ion-text-center">
+	<ion-button color="medium" size="large" (click)="locate()">Update Location</ion-button>
+	</div>
+	<br />
+	<br />
+	<h3 class="ion-text-center appInfo">{{paragraph1}}</h3>
+	<br />
+	<h3 class="ion-text-center appInfo">{{paragraph2}}</h3>
+
+</ion-content>
