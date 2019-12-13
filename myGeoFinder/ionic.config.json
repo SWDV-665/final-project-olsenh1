@@ -1,0 +1,7 @@
+{
+  "name": "myGeoFinder",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
